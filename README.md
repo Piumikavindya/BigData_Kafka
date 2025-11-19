@@ -1,6 +1,6 @@
 # BigData_Kafka
 
-# Kafka + Avro Orders Processing System
+## Kafka + Avro Orders Processing System
 
 This project implements a simple real-time ingestion and processing pipeline using **Apache Kafka** with **Avro serialization**, including:
 - Kafka Producer (Avro serialization)
@@ -14,7 +14,7 @@ This README provides **complete end-to-end instructions** to install Kafka, crea
 
 ---
 
-#  🚀 1. Install Required Dependencies (Ubuntu)
+## 🚀 1. Install Required Dependencies (Ubuntu)
 
 sudo apt update
 sudo apt upgrade -y
@@ -28,13 +28,13 @@ echo $KAFKA_CLUSTER_ID
 ### Start Kafka Server
 bin/kafka-server-start.sh config/kraft/server.properties
 
-# 🚀 2. Create Required Kafka Topics
+## 🚀 2. Create Required Kafka Topics
 
 cd ~/kafka
 bin/kafka-topics.sh --create --topic orders --bootstrap-server localhost:9092
 bin/kafka-topics.sh --create --topic orders_dlq --bootstrap-server localhost:9092
 
-# 🚀 5. Run the System
+## 🚀 3. Run the System
 
 
 python3 -m venv venv
